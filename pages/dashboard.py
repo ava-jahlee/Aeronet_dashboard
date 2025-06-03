@@ -15,7 +15,7 @@ st.set_page_config(
 url = "http://10.1.1.45:8086/"
 token = "KnTeQgIilv1hmqbHqS8kJKaIDFKlFhz8s5kGJX_E2wL6pWaJI4n-8NzQzKwJDv4xPEcktjeE6Dn0B7GjVVw1YA=="
 org = "eantec_ru"
-bucket = "Aeropups-4F"
+bucket = "Aeropups_4F"
 
 # 센서 종류와 측정 항목 매핑
 sensor_measurement_map = {
