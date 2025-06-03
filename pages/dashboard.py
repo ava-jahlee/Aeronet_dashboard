@@ -20,7 +20,7 @@ bucket = "Aeropups_4F"
 # InfluxDB 연결
 try:
     # timeout을 30초 (30000ms)로 설정
-    client = InfluxDBClient(url=url, token=token, org=org, timeout=30_000) #
+    client = InfluxDBClient(url=url, token=token, org=org, timeout=60_000) #
     query_api = client.query_api()
 except Exception as e:
     st.error(f"InfluxDB 연결 실패: {e}")
