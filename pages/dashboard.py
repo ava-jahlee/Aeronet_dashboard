@@ -17,6 +17,15 @@ token = "KnTeQgIilv1hmqbHqS8kJKaIDFKlFhz8s5kGJX_E2wL6pWaJI4n-8NzQzKwJDv4xPEcktje
 org = "eantec_ru"
 bucket = "Aeropups_4F"
 
+# InfluxDB 연결
+try:
+    # timeout을 30초 (30000ms)로 설정
+    client = InfluxDBClient(url=url, token=token, org=org, timeout=30_000) #
+    query_api = client.query_api()
+except Exception as e:
+    st.error(f"InfluxDB 연결 실패: {e}")
+    st.stop()
+
 # 센서 종류와 측정 항목 매핑
 sensor_measurement_map = {
     "bme280": ("environment", ["temperature", "humidity", "pressure", "altitude"]),
